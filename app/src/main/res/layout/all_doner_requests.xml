@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/varela_round"
+                        android:textSize="20sp"
+                        android:id="@+id/detailFullName"
+                        android:singleLine="true"
+                        android:maxWidth="120dp"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="true"
+                        android:contextClickable="true"
+                        android:scrollHorizontally="true"
+                        android:freezesText="true"
+                        android:text="User Name"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="11sp"
+                            android:drawableStart="@drawable/ic_location"
+                            android:gravity="center"
+                            android:maxWidth="120dp"
+                            android:text="State : "
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:id="@+id/detailState"
+                            android:maxWidth="120dp"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:ellipsize="marquee"
+                            android:textStyle="bold"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:clickable="true"
+                            android:contextClickable="true"
+                            android:scrollHorizontally="true"
+                            android:freezesText="true"
+                            android:text="Odisha"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="11sp"
+                            android:singleLine="true"
+                            android:maxWidth="120dp"
+                            android:text="District : "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="12sp"
+                            android:id="@+id/District"
+                            android:textStyle="bold"
+                            android:maxWidth="110dp"
+                            android:singleLine="true"
+                            android:text="Kolhapur"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="11sp"
+                            android:singleLine="true"
+                            android:maxWidth="120dp"
+                            android:text="Tehsil : "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="12sp"
+                            android:id="@+id/Tehsil"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:maxWidth="120dp"
+                            android:text="Panhala"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="11sp"
+                            android:singleLine="true"
+                            android:maxWidth="120dp"
+                            android:text="Village : "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/varela_round"
+                            android:textSize="12sp"
+                            android:id="@+id/Village"
+                            android:maxWidth="110dp"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:tooltipText="Tooltip"
+                            android:text="Kodoli"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bloodImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/blood" />
+
+                    <TextView
+                        android:id="@+id/detailBloodGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/varela_round"
+                        android:maxWidth="120dp"
+                        android:singleLine="true"
+                        android:layout_centerInParent="true"
+                        android:textColor="@android:color/white"
+                        android:text="O+"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/icons"
+                android:layout_marginTop="5dp"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/share"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:onClick="requestBlood"
+                    android:text="Share"
+                    android:background="@drawable/button"
+                    android:layout_marginEnd="5dp"
+                    android:textAllCaps="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/call"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:onClick="requestBlood"
+                    android:background="@drawable/button"
+                    android:theme="@style/MyButtonTheme"
+                    android:text="Call"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

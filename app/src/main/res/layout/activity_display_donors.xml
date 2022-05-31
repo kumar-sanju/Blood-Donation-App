@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Activity.DisplayDonorsActivity">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/relativeDonor"
+        android:gravity="center"
+        android:foregroundGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@id/more"
+            android:textSize="12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/distHelp"
+            android:text="Displayed Requests Are from ALL districts.\nTo change DISTRICT search below."
+            />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/dist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toStartOf="@id/more"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/distHelp">
+
+            <EditText
+                android:textAlignment="center"
+                android:padding="6dp"
+                android:textSize="12sp"
+                android:hint="Search Your District Here..."
+                android:id="@+id/districtFilterRequest"
+                android:drawableStart="@drawable/ic_search"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:imeActionLabel=""
+                android:imeOptions="actionDone"
+                android:inputType="textCapCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_border"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dist"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@id/more"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/varela_round"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="If you can help them send Mail or Share their Info."
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/more"
+            android:layout_marginEnd="5dp"
+            android:tooltipText="More"
+            android:onClick="popUp"
+            android:src="@drawable/ic_more"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/donorsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_above="@id/relative1"
+        android:layout_below="@id/relativeDonor" />
+
+    <RelativeLayout
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/relative1">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewDonors"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:onClick="viewRequestList"
+            android:text="View Requests"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

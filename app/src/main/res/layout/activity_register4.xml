@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_to_red"
+    tools:context=".Register.Register4Activity">
+
+    <RelativeLayout
+        android:id="@+id/bloodImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blood_drop" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/varela_round"
+        android:text="Cell &amp; Blood Details"
+        android:textColor="#9F000000"
+        android:textSize="35sp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="#000000"
+            app:hintTextColor="#000000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showFlag="true"
+                app:ccp_textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:ccpDialog_showFlag="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:ccp_showNameCode="true"
+                android:focusable="true"
+                android:onClick="onCountryPickerClick"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000000"
+            app:hintTextColor="#000000"
+            app:startIconDrawable="@drawable/ic_call">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Mobile Number"
+                android:id="@+id/mobileEditText"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000000"
+            app:hintTextColor="#000000"
+            app:startIconDrawable="@drawable/ic_blood_group">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/bloodGrpDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Blood Groups"
+                android:inputType="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:textColorHint="#000000"
+            android:visibility="gone"
+            app:hintTextColor="#000000">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="OTP"
+                android:id="@+id/verificationText"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Submit"
+            android:id="@+id/btnVerifySubmit"
+            android:theme="@style/MyButtonTheme"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:fontFamily="@font/varela_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood is Life, Pass it On!"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="32dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
